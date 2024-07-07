@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Locating Missing Persons</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/media/img/favicon.ico" rel="icon">
+    <link href="/media/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static '/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static '/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static '/assets/css/style.css' %}" rel="stylesheet">
+
+  
+
+</head>
+
+
+<body>
+    <!-- ======= Header ======= -->
+
+    {% include 'header.html' %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-1 hero-img" data-aos="zoom-in" data-aos-delay="200">
+            <img src="{% static '/img/home_img.png' %}" style="width: 550px; height: 450px;" class="img-fluid animated" alt="">
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <h1>Unifying Hearts,<br/> Reviving Bonds</h1>
+            <h2>Trace Tracker, powered by AI and ML, is a special effort devoted to locating and bringing together lost individuals with their loved ones throughout India. We use advanced technology and caring collaboration to ensure that everyone is found and reunited.</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+                {% if user.is_authenticated %}
+                <a class="btn-get-started scrollto" href="/registercase">Add Missing Case</a>
+                {% endif %}
+            </div>
+            </div>
+            
+        </div>
+        </div>
+
+    </section><!-- End Hero -->
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              We are a team of passionate engineers determined to tackle real-world challenges. Our mission is to harness the power of AI and ML to solve one of India's most pressing issues – reuniting missing individuals with their families.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> We believe in technology that serves humanity.</li>
+              <li><i class="ri-check-double-line"></i> Our team of skilled engineers is at the forefront of AI and ML innovation. </li>
+              <li><i class="ri-check-double-line"></i> While we are engineers, we are also driven by empathy and compassion. </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              This is just the beginning. We are constantly refining and expanding our technology to better serve our mission. Our team is excited about the future possibilities and the positive change we can bring to society.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Beyond lines of code and algorithms, we measure our success by the real-world impact we create. </li>
+              <li><i class="ri-check-double-line"></i> We are more than just engineers; we are a team united by a common purpose.</li>
+              <li><i class="ri-check-double-line"></i>Our engineers understand that solving real-world problems requires community engagement. </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+    <!-- ======= Technologies Section ======= -->
+    <section id="skills" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Technologies</h2>
+          <p>We are at the forefront of technological innovation, utilizing the latest advancements to create a cutting-edge missing person detection system. Our approach is grounded in the application of state-of-the-art technologies, including Artificial Intelligence (AI) and Machine Learning (ML).</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Bootstrap</a></h4>
+              <p>Bootstrap is a popular, responsive, and front-end web framework, simplifying website development through its extensive pre-designed components and CSS styling.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">Django</a></h4>
+                <p>Django is a powerful and versatile web framework known for its ease of use, scalability, and robust features, making it a top choice for web developers worldwide.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">face-recgonition</a></h4>
+                <p>Face recognition, a cutting-edge technology, enables the identification of individuals through facial features, revolutionizing security and authentication methods.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+                <div class="icon"><i class="bx bx-layer"></i></div>
+                <h4><a href="">Sqlite3</a></h4>
+                <p>SQLite3 is a lightweight, self-contained, serverless database management system that excels in simplicity and efficiency, catering to various application needs.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+
+          
+
+   
+ 
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>These are some of the commonly asked questions by our users, along with detailed answers to provide you with the information you need to understand and engage with the Locating missing persons system initiative.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is Locating missing persons system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Our system is a pioneering initiative that leverages the power of Artificial Intelligence (AI) and Machine Learning (ML) to address the critical issue of missing individuals in India. Our mission is to reunite missing persons with their families by harnessing cutting-edge technology and a compassionate team of experts.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed"> How does Locating missing persons system work? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Our system uses AI and ML algorithms to analyze data, including images and videos, to aid in the identification and location of missing individuals. By processing and cross-referencing information from various sources, we provide valuable insights to law enforcement agencies and families involved in the search
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How does Locating missing persons system prioritize privacy and data security?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  We take data privacy and security seriously. We employ advanced encryption techniques to protect sensitive information and ensure that user data remains secure. We adhere to stringent data protection standards and regulations.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"> Are there any success stories or notable achievements of Locating missing persons system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, we have successfully assisted in locating and reuniting missing individuals with their families. We have received recognition and praise for our efforts, and you can find testimonials and success stories on our website.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What are the future plans and goals of Locating missing persons system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Our future plans involve expanding our technological capabilities, reaching more communities, and collaborating with law enforcement agencies to make our system even more effective in reuniting missing individuals with their families.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <!-- <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Locating missing persons system</h3>
+            <p>
+              GIET University <br>
+              Gunupur,Rayagada,Odisha,765022<br>
+              India <br><br>
+              <strong>Phone:</strong> +91 99895 54885<br>
+              <strong>Email:</strong> info@bharatiyarescue.com<br>
+            </p>
+          </div> -->
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Technologies</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Stay updated, engaged,and connected with Locating missing persons system through our social media channels. Join our online community to follow our mission, discover inspiring stories, and get involved in our cause.</p>
+            <div class="social-links mt-3">
+              <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Trace Tracker</span></strong>
+      </div>
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/-free-bootstrap-html-template-corporate/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/"></a> -->
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="/" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static '/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static '/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static '/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static '/assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static '/assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

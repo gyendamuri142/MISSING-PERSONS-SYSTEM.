@@ -1,0 +1,70 @@
+
+{% load static %}
+<h1 class="text-center">Missing Persons</h1>
+ <div >
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for person in missingperson %}
+        <div class="row-4 mb-1 align-items-center">
+            <div class="card h-100 mx-sm-3 mx-lg-5 m-2">
+                <div class="view overlay" >
+                    <img class="card-img-top center-image" src="{% static '/' %}{{ person.image }}" alt="Card image cap" style="height:300px;" >
+                </div>
+                <div class="card-body">
+                    <!-- Title -->
+                    <h5 class="card-title">Name : <b>{{person.first_name}} {{person.last_name}}</b> </h5> 
+                    <!-- Text -->
+                    <p class="card-text">Aadhar Number :<b> {{person.aadhar_number}} </b>
+                        <br>
+                        Missing From : <b> {{person.missing_from}} </b>
+                        <br>
+                        Phone Number : <b> {{person.phone_number}} </b>
+                    </p> 
+                    <!-- Button -->
+                    {% if user.is_authenticated and user.is_staff %}
+                        <a href="{% url 'delete_person' person.id %}" class="btn btn-outline-danger" id="bt2">Delete</a>
+                        <a href="{% url 'update_person' person.id %}" class="btn btn-outline-warning" id="bt3">Edit</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>  
+
+
+
+
+
+
+<!-- <h1>Missing Persons</h1>
+    
+    <div class="row my-3">
+        {% for person in missingperson %}
+        <div class="col-md-4 my-3">
+            
+            <div class="card">
+                <div class="view overlay">
+                    <img class="card-img-top img-fluid center-image" src="{% static '/' %}{{ person.image }}" alt="Card image cap" style="height: 300px; object-fit: cover;" >
+                </div>
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Name : <b>{{person.first_name}} {{person.last_name}}</b> </h5>
+                    
+                    <p class="card-text">Aadhar Number :<b> {{person.aadhar_number}} </b>
+                        <br>
+                        Missing From : <b> {{person.missing_from}} </b>
+                        <br>
+                        Phone Number : <b> {{person.phone_number}} </b>
+                    </p>
+                    
+                    {% if user.is_authenticated and user.is_staff %}
+                        <a href="{% url 'delete_person' person.id %}" class="btn btn-outline-danger" id="bt2">Delete</a>
+                        <a href="{% url 'update_person' person.id %}" class="btn btn-outline-warning" id="bt3">Edit</a>
+                    {% endif %}
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div> -->
+

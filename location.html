@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Data</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .address-cell {
+            max-width: 200px; /* Adjust the maximum width as needed */
+            word-wrap: break-word; /* Wrap long text */
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg  py-2" style="background-color: #031027;">
+        <div class="container-fluid justify-content-between" style="font-family: 'Jost', sans-serif;padding-left: 8%;">
+            <div class="d-flex">
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/">
+                    <h2 style="color: white;">Trace Tracker</h2>
+                </a>
+            </div>
+            <div class="d-flex">
+                <a style="color: white;" class="nav-link" href="/">Home</a>
+                <a style="color: white;" class="nav-link" href="/missing">View Missing Persons</a>
+
+              </div>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <h1 class="text-center my-3">Location Data</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Missing Person</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Detected At</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for location in locations %}
+                    <tr>
+                        <td><img src="{% static '/' %}{{ location.missing_person.image }}" alt="Photo" style="max-width: 100px;"></td>
+                        <td>{{ location.missing_person }}</td>
+                        <td>{{ location.latitude }}</td>
+                        <td>{{ location.longitude }}</td>
+                        <td>{{ location.detected_at }}</td>
+                        <td class="address-cell">{{ location.address }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS (optional, for certain Bootstrap features like dropdowns) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

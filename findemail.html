@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Missing Person Found Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #15b555;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .details {
+            font-weight: bold;
+        }
+
+        .confirm-button {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            color: green;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Good News: Missing Person Found!</h1>
+        </div>
+    </div>
+    <div class="content">
+        <p>Dear {{father_name}},</p>
+        <p>We're relieved to share with you that the missing person you were concerned about has been located. They were spotted in camera footage, and we've successfully identified their whereabouts.</p>
+        <p>Here are the details:</p>
+        <ul>
+            <li><strong>Name:</strong> {{first_name}} {{last_name}}</li>
+            <li><strong>Date and Time of Sighting:</strong> {{date_time}}</li>
+            <li><strong>Location:</strong> {{location}}</li>
+            <li><strong>Aadhar Number:</strong> {{aadhar_number}}</li>
+        </ul>
+        <p>We can only imagine the relief you must be feeling. Should you have any further inquiries or require additional information, please don't hesitate to contact us.</p>
+        <form action="/confirm_found" method="POST">
+            <button class="btn outline confirm-button" type="submit"> 😊 Yes, I've Found Him/Her</button>
+            <button style="color: red;" class="btn outline confirm-button" type="submit"> 😔 No, I haven't Found Him/Her</button>
+
+        </form>
+        <p>Thank you sincerely for your cooperation and concern throughout this ordeal.</p>
+        <p>Best Regards,</p>
+        <p>Trace Tracker</p>
+    </div>
+    
+</body>
+</html>

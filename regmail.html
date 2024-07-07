@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Registered Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #e05924;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .details {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Case Successfully Registered</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{fathers_name}},</p>
+            <p>We are pleased to inform you that your case has been successfully registered with Trace Tracker. Below are the details:</p>
+    
+            <div class="details">
+                <p>Case Registered on: {{date_time}}</p>
+                <p>Name: {{first_name}} {{last_name}}</p>
+                <p>Aadhar Number: {{aadhar_number}}</p>
+                <p>Missing From: {{missing_from}}</p>
+            </div>
+    
+            <p>Your information and case details have been securely recorded in our system. Our dedicated team will carefully review your case and take the necessary actions. Rest assured, we will keep you informed of any updates or developments concerning your case.</p>
+            <p>If you have any urgent concerns or additional information to provide, please don't hesitate to reach out to our support team at tracetracker1@gmail.com.</p>
+            <p>We appreciate your trust in Trace Tracker. Please know that we are fully committed to supporting you during this challenging time.</p>
+    
+            <p>Warm regards,</p>
+            <p>Trace Tracker</p>
+        </div>
+    </div>    
+</body>
+</html>
